@@ -1,8 +1,10 @@
-package cn.edu.uoh.learnandroid;
+package cn.edu.uoh.learnandroid.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import cn.edu.uoh.learnandroid.R;
 
 public class FirstDemoActivity extends AppCompatActivity {
 

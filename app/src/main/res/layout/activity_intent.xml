@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.IntentActivity">
+
+
+    <Button
+        android:id="@+id/start_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="菜单Activity"
+        android:onClick="startMenuActtivity"/>
+
+    <Button
+        android:id="@+id/open_baidu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openBaidu"
+        android:text="访问百度" />
+
+    <Button
+        android:id="@+id/callphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="callphone"
+        android:text="拨打电话" />
+</LinearLayout>
