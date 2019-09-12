@@ -32,6 +32,9 @@ public class MenuActivity extends AppCompatActivity {
             case R.id.edit_item:
                 Toast.makeText(this, "You clicked Edit", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.new_item:
+                Toast.makeText(this, "You clicked New", Toast.LENGTH_SHORT).show();
+                break;
             default:
         }
         return true;
