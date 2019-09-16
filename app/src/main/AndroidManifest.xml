@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.LifeCycleActivity"></activity>
+        <activity android:name=".ui.ConstraintDemoActivity"></activity>
+        <activity android:name=".ui.LinearDemoActivity" />
+        <activity android:name=".activity.LifeCycleActivity" />
         <activity android:name=".activity.ReplyDataActivity" />
         <activity android:name=".activity.SendDataActivity" />
         <activity android:name=".activity.IntentActivity" />
