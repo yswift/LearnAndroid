@@ -33,4 +33,9 @@ public class IntentActivity extends AppCompatActivity {
         intent.setData(Uri.parse("tel:10086"));
         startActivity(intent);
     }
+
+    public void startSendDataActivity(View view) {
+        Intent intent = new Intent(this, SendDataActivity.class);
+        startActivity(intent);
+    }
 }

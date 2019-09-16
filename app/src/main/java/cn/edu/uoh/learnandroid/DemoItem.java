@@ -7,7 +7,6 @@ public class DemoItem {
             new DemoItem("First Activiity", FirstDemoActivity.class),
             new DemoItem("菜单", MenuActivity.class),
             new DemoItem("Intent", IntentActivity.class),
-            new DemoItem("数据传递", SendDataActivity.class),
             new DemoItem("生命周期", LifeCycleActivity.class),
     };
 
