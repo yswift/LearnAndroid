@@ -1,7 +1,9 @@
 package cn.edu.uoh.learnandroid;
 
 import cn.edu.uoh.learnandroid.activity.*;
-import cn.edu.uoh.learnandroid.ui.*;
+import cn.edu.uoh.learnandroid.ui.ConstraintDemoActivity;
+import cn.edu.uoh.learnandroid.ui.DataBindActivity;
+import cn.edu.uoh.learnandroid.ui.LinearDemoActivity;
 
 public class DemoItem {
     public static DemoItem[] items = {
@@ -11,6 +13,7 @@ public class DemoItem {
             new DemoItem("生命周期", LifeCycleActivity.class),
             new DemoItem("Linear layout", LinearDemoActivity.class),
             new DemoItem("Constraint layout", ConstraintDemoActivity.class),
+            new DemoItem("数据绑定", DataBindActivity.class),
     };
 
     String name;
