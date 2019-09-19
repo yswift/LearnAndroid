@@ -72,6 +72,50 @@
             android:padding="10dp"
             tools:context=".ui.DataBindActivity">
 
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="updateM2"
+                android:text="刷新"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年龄"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/txtName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:text="@{m2.name}"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/txtAge2"
+                android:layout_width="61dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="4dp"
+                android:text="@{String.valueOf(m2.age)}"
+                app:layout_constraintStart_toStartOf="@+id/txtName2"
+                app:layout_constraintTop_toBottomOf="@+id/txtName2" />
+
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
@@ -81,50 +125,15 @@
                 android:text="单向绑定（更新UI）"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="姓名"
-                app:layout_constraintStart_toStartOf="@+id/textView5"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="年龄"
-                app:layout_constraintStart_toStartOf="@+id/textView6"
-                app:layout_constraintTop_toBottomOf="@+id/textView6"
-                />
-
-            <TextView
-                android:id="@+id/txtName2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@{m1.name}"
-                app:layout_constraintStart_toEndOf="@+id/textView6"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                />
-
-            <TextView
-                android:id="@+id/txtAge2"
-                android:layout_width="61dp"
-                android:layout_height="15dp"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="4dp"
-                android:text="@{String.valueOf(m1.age)}"
-                app:layout_constraintStart_toStartOf="@+id/txtName2"
-                app:layout_constraintTop_toBottomOf="@+id/txtName2" />
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
     <data>
         <variable
             name="m1"
             type="cn.edu.uoh.learnandroid.ui.DataModel1" />
+        <variable
+            name="m2"
+            type="cn.edu.uoh.learnandroid.ui.DataModel2" />
     </data>
 </layout>
