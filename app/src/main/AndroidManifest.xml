@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.DataBindActivity"></activity>
+        <activity android:name=".ui.NotifyMsgActivity"></activity>
+        <activity android:name=".ui.DataBindActivity" />
         <activity android:name=".ui.ConstraintDemoActivity" />
         <activity android:name=".ui.LinearDemoActivity" />
         <activity android:name=".activity.LifeCycleActivity" />
