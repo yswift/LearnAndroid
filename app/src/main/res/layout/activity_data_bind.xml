@@ -127,6 +127,55 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="请输入姓名"
+                android:inputType="textPersonName"
+                android:text="@={m3.name}"
+                app:layout_constraintStart_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="双向绑定"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="姓名："
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/editText2"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@{m3.name}"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/txtName3"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
     <data>
         <variable
@@ -135,5 +184,8 @@
         <variable
             name="m2"
             type="cn.edu.uoh.learnandroid.ui.DataModel2" />
+        <variable
+            name="m3"
+            type="cn.edu.uoh.learnandroid.ui.DataModel3" />
     </data>
 </layout>

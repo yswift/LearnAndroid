@@ -13,6 +13,8 @@ public class DemoItem {
             new DemoItem("Constraint layout", ConstraintDemoActivity.class),
             new DemoItem("数据绑定", DataBindActivity.class),
             new DemoItem("提示、通知消息", NotifyMsgActivity.class),
+            new DemoItem("简单ListView", ListDemo1Activity.class),
+            new DemoItem("复杂ListView", ListDemo2Activity.class),
     };
 
     String name;

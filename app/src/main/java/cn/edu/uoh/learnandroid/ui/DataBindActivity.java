@@ -18,10 +18,14 @@ public class DataBindActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_data_bind);
         ActivityDataBindBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_bind);
+
         DataModel1 m1 = new DataModel1("张三", 20);
         m2 = new DataModel2("李四", 21);
+        DataModel3 m3 = new DataModel3("张三三");
+
         binding.setM1(m1);
         binding.setM2(m2);
+        binding.setM3(m3);
     }
 
     public void updateM2(View view) {

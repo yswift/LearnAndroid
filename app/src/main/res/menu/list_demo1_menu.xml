@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/simple_list_item_1"
+        android:title="simple_list_item_1"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/simple_list_item_activated_1"
+        android:title="simple_list_item_activated_1"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/simple_list_item_checked"
+        android:title="simple_list_item_checked"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/simple_list_item_multiple_choice"
+        android:title="simple_list_item_multiple_choice"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/simple_list_item_single_choice"
+        android:title="simple_list_item_single_choice"
+        app:showAsAction="never" />
+</menu>

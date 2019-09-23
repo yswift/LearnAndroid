@@ -13,6 +13,8 @@
         <activity android:name=".ui.DataBindActivity" />
         <activity android:name=".ui.ConstraintDemoActivity" />
         <activity android:name=".ui.LinearDemoActivity" />
+        <activity android:name=".ui.ListDemo1Activity" />
+        <activity android:name=".ui.ListDemo2Activity" />
         <activity android:name=".activity.LifeCycleActivity" />
         <activity android:name=".activity.ReplyDataActivity" />
         <activity android:name=".activity.SendDataActivity" />
