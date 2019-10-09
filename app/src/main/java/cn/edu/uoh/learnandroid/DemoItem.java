@@ -15,6 +15,7 @@ public class DemoItem {
             new DemoItem("提示、通知消息", NotifyMsgActivity.class),
             new DemoItem("简单ListView", ListDemo1Activity.class),
             new DemoItem("复杂ListView", ListDemo2Activity.class),
+            new DemoItem("RecyclerView", RecyclerViewActivity.class),
     };
 
     String name;
