@@ -10,7 +10,6 @@ import cn.edu.uoh.learnandroid.R;
 import cn.edu.uoh.learnandroid.databinding.ActivityDataBindBinding;
 
 public class DataBindActivity extends AppCompatActivity {
-
     DataModel2 m2;
 
     @Override
@@ -21,7 +20,7 @@ public class DataBindActivity extends AppCompatActivity {
 
         DataModel1 m1 = new DataModel1("张三", 20);
         m2 = new DataModel2("李四", 21);
-        DataModel3 m3 = new DataModel3("张三三");
+        DataModel2 m3 = new DataModel2("张三三", 22);
 
         binding.setM1(m1);
         binding.setM2(m2);

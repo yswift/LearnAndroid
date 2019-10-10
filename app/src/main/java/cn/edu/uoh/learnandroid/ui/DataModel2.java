@@ -3,9 +3,6 @@ package cn.edu.uoh.learnandroid.ui;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 
-import cn.edu.uoh.learnandroid.BR;
-
-
 public class DataModel2 extends BaseObservable {
     private String name;
     private int age;
@@ -34,4 +31,14 @@ public class DataModel2 extends BaseObservable {
         this.age = age;
         notifyPropertyChanged(cn.edu.uoh.learnandroid.BR.age);
     }
+
+//    @BindingAdapter("android:text")
+//    public static void setText(TextView view, int value) {
+//        view.setText(Integer.toString(value));
+//    }
+//
+//    @InverseBindingAdapter(attribute = "android:text")
+//    public static int getText(TextView view) {
+//        return Integer.parseInt(view.getText().toString());
+//    }
 }

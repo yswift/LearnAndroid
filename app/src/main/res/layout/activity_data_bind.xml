@@ -130,7 +130,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/editText2"
@@ -176,6 +176,26 @@
                 app:layout_constraintStart_toEndOf="@+id/txtName3"
                 app:layout_constraintTop_toBottomOf="@+id/editText2" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{``+m3.age}" />
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@={``+m3.age}" />
+
+        </LinearLayout>
     </LinearLayout>
     <data>
         <variable
@@ -186,6 +206,6 @@
             type="cn.edu.uoh.learnandroid.ui.DataModel2" />
         <variable
             name="m3"
-            type="cn.edu.uoh.learnandroid.ui.DataModel3" />
+            type="cn.edu.uoh.learnandroid.ui.DataModel2" />
     </data>
 </layout>
