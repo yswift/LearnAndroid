@@ -77,6 +77,11 @@ public class ListDemo1Activity extends AppCompatActivity {
                 //如果回调函数处理了长按事件，返回真；否则返回假。
             }
         });
+//        listView.setOnItemLongClickListener((adapterView, view, position, id) -> {
+//            String clicked = adapterView.getItemAtPosition(position).toString();
+//            Toast.makeText(ListDemo1Activity.this, "长按：" + clicked, Toast.LENGTH_SHORT).show();
+//            return true;
+//        });
     }
 
     private ArrayList<String> getData() {

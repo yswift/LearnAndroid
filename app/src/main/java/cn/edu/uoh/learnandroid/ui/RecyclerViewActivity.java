@@ -20,10 +20,10 @@ public class RecyclerViewActivity extends AppCompatActivity {
         RecyclerView weatherRecycler = findViewById(R.id.weather_recycler);
 
         // 线性布局
-        LinearLayoutManager lm = new LinearLayoutManager(this);
-        lm.setOrientation(LinearLayoutManager.VERTICAL);
+//        LinearLayoutManager lm = new LinearLayoutManager(this);
+//        lm.setOrientation(LinearLayoutManager.HORIZONTAL);
         // 网格布局
-//        GridLayoutManager lm = new GridLayoutManager(this, 2);
+        GridLayoutManager lm = new GridLayoutManager(this, 3);
         // 不规则布局
 //        StaggeredGridLayoutManager lm = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
 

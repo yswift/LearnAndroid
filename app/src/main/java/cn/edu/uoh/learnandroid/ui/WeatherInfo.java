@@ -11,6 +11,9 @@ public class WeatherInfo {
             new WeatherInfo("星期二", R.drawable.cloudy3),
             new WeatherInfo("星期三", R.drawable.hail),
             new WeatherInfo("星期四", R.drawable.snow4),
+            new WeatherInfo("星期五", R.drawable.fog),
+            new WeatherInfo("星期六", R.drawable.shower1_night),
+            new WeatherInfo("星期日", R.drawable.tstorm1),
     };
 
     public WeatherInfo(String date, int imageResourceId) {

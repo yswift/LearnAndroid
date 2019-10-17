@@ -1,6 +1,7 @@
 package cn.edu.uoh.learnandroid.ui;
 
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -18,6 +19,7 @@ import cn.edu.uoh.learnandroid.R;
 public class WeatherInfoAdapter
         extends RecyclerView.Adapter<WeatherInfoAdapter.ViewHolder> {
 
+    private static final String TAG = "WeatherInfoAdapter";
     private WeatherInfo[] weatherInfoList;
 
     public WeatherInfoAdapter(WeatherInfo[] weatherInfoList) {
@@ -27,6 +29,7 @@ public class WeatherInfoAdapter
     @NonNull
     @Override
     public WeatherInfoAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        Log.i(TAG, "onCreateViewHolder: ");
         CardView cv = (CardView) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.card_weather_info, parent, false);
         return new ViewHolder(cv);
@@ -34,6 +37,7 @@ public class WeatherInfoAdapter
 
     @Override
     public void onBindViewHolder(@NonNull WeatherInfoAdapter.ViewHolder holder, int position) {
+        Log.i(TAG, "onBindViewHolder: position = " + position);
         // 获取数据
         WeatherInfo wi = weatherInfoList[position];
 
