@@ -1,6 +1,7 @@
 package cn.edu.uoh.learnandroid;
 
 import cn.edu.uoh.learnandroid.activity.*;
+import cn.edu.uoh.learnandroid.fragment.*;
 import cn.edu.uoh.learnandroid.ui.*;
 
 public class DemoItem {
@@ -16,6 +17,8 @@ public class DemoItem {
             new DemoItem("简单ListView", ListDemo1Activity.class),
             new DemoItem("复杂ListView", ListDemo2Activity.class),
             new DemoItem("RecyclerView", RecyclerViewActivity.class),
+            new DemoItem("静态Fragment", StaticFragmentActivity.class),
+            new DemoItem("动态Fragment", DynamicFragmentActivity.class),
     };
 
     String name;
