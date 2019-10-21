@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fragment.DynamicFragmentActivity"></activity>
+        <activity android:name=".fragment.fakenews.NewsContentActivity"></activity>
+        <activity android:name=".fragment.fakenews.NewsActivity" />
+        <activity android:name=".fragment.FragmentStatesActivity" />
+        <activity android:name=".fragment.DynamicFragmentActivity" />
         <activity android:name=".fragment.StaticFragmentActivity" />
         <activity android:name=".ui.RecyclerViewActivity" />
         <activity android:name=".ui.NotifyMsgActivity" />

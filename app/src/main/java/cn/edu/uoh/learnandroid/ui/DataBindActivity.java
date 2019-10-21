@@ -11,12 +11,13 @@ import cn.edu.uoh.learnandroid.databinding.ActivityDataBindBinding;
 
 public class DataBindActivity extends AppCompatActivity {
     DataModel2 m2;
+    ActivityDataBindBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_data_bind);
-        ActivityDataBindBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_bind);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_data_bind);
 
         DataModel1 m1 = new DataModel1("张三", 20);
         m2 = new DataModel2("李四", 21);
@@ -28,7 +29,8 @@ public class DataBindActivity extends AppCompatActivity {
     }
 
     public void updateM2(View view) {
-        m2.setName("王五");
-        m2.setAge(40);
+//        m2.setName("王五");
+//        m2.setAge(40);
+        binding.setM2(new DataModel2("李四2", 212));
     }
 }

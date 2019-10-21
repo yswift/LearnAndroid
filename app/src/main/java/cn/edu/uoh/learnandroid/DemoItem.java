@@ -2,6 +2,7 @@ package cn.edu.uoh.learnandroid;
 
 import cn.edu.uoh.learnandroid.activity.*;
 import cn.edu.uoh.learnandroid.fragment.*;
+import cn.edu.uoh.learnandroid.fragment.fakenews.NewsActivity;
 import cn.edu.uoh.learnandroid.ui.*;
 
 public class DemoItem {
@@ -19,6 +20,8 @@ public class DemoItem {
             new DemoItem("RecyclerView", RecyclerViewActivity.class),
             new DemoItem("静态Fragment", StaticFragmentActivity.class),
             new DemoItem("动态Fragment", DynamicFragmentActivity.class),
+            new DemoItem("Fragment 状态保存", FragmentStatesActivity.class),
+            new DemoItem("新闻案例(Fragment)", NewsActivity.class),
     };
 
     String name;

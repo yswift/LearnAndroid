@@ -7,10 +7,14 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import cn.edu.uoh.learnandroid.R;
 
 public class DynamicFragmentActivity extends AppCompatActivity {
+    Demo1Fragment demo1 = new Demo1Fragment();
+    Demo2Fragment demo2 = new Demo2Fragment();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,11 +22,11 @@ public class DynamicFragmentActivity extends AppCompatActivity {
     }
 
     public void startDemo1(View view) {
-        replaceFragment(new Demo1Fragment());
+        replaceFragment(demo1);
     }
 
     public void startDemo2(View view) {
-        replaceFragment(new Demo2Fragment());
+        replaceFragment(demo2);
     }
 
     private void replaceFragment(Fragment fragment) {
