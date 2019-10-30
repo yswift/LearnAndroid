@@ -3,6 +3,7 @@ package cn.edu.uoh.learnandroid;
 import cn.edu.uoh.learnandroid.activity.*;
 import cn.edu.uoh.learnandroid.fragment.*;
 import cn.edu.uoh.learnandroid.fragment.fakenews.NewsActivity;
+import cn.edu.uoh.learnandroid.note.NoteActivity;
 import cn.edu.uoh.learnandroid.ui.*;
 import cn.edu.uoh.learnandroid.storage.*;
 
@@ -26,6 +27,7 @@ public class DemoItem {
             new DemoItem("存储SharedPreferences", SharedPreferencesActivity.class),
             new DemoItem("存储Internal", InternalStorageActivity.class),
             new DemoItem("存储External", ExternalStorageActivity.class),
+            new DemoItem("记事本案例", NoteActivity.class),
     };
 
     String name;

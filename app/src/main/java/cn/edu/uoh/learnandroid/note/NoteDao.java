@@ -3,6 +3,7 @@ package cn.edu.uoh.learnandroid.note;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import java.util.List;
@@ -13,9 +14,9 @@ public interface NoteDao {
     List<Note> getAll();
 
     @Query("SELECT * FROM note WHERE id = :id")
-    Note findById(String id);
+    Note findById(int id);
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(Note... notes);
 
     @Delete
