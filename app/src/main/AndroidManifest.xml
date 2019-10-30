@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fragment.fakenews.NewsContentActivity"></activity>
+        <activity android:name=".note.NoteActivity"></activity>
+        <activity android:name=".storage.ExternalStorageActivity" />
+        <activity android:name=".storage.InternalStorageActivity" />
+        <activity android:name=".storage.SharedPreferencesActivity" />
+        <activity android:name=".fragment.fakenews.NewsContentActivity" />
         <activity android:name=".fragment.fakenews.NewsActivity" />
         <activity android:name=".fragment.FragmentStatesActivity" />
         <activity android:name=".fragment.DynamicFragmentActivity" />
@@ -35,5 +39,8 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>

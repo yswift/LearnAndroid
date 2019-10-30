@@ -4,6 +4,7 @@ import cn.edu.uoh.learnandroid.activity.*;
 import cn.edu.uoh.learnandroid.fragment.*;
 import cn.edu.uoh.learnandroid.fragment.fakenews.NewsActivity;
 import cn.edu.uoh.learnandroid.ui.*;
+import cn.edu.uoh.learnandroid.storage.*;
 
 public class DemoItem {
     public static DemoItem[] items = {
@@ -22,6 +23,9 @@ public class DemoItem {
             new DemoItem("动态Fragment", DynamicFragmentActivity.class),
             new DemoItem("Fragment 状态保存", FragmentStatesActivity.class),
             new DemoItem("新闻案例(Fragment)", NewsActivity.class),
+            new DemoItem("存储SharedPreferences", SharedPreferencesActivity.class),
+            new DemoItem("存储Internal", InternalStorageActivity.class),
+            new DemoItem("存储External", ExternalStorageActivity.class),
     };
 
     String name;
