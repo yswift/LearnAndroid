@@ -57,7 +57,7 @@ public class ListDemo1Activity extends AppCompatActivity {
     }
 
     private void setListView(int templateId) {
-        ListView listView = (ListView) findViewById(R.id.listView);
+        ListView listView = findViewById(R.id.listView);
         ArrayList<String> data = getData();
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, templateId, data);
         listView.setAdapter(adapter);
