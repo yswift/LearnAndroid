@@ -2,6 +2,7 @@ package cn.edu.uoh.learnandroid;
 
 import cn.edu.uoh.learnandroid.activity.*;
 import cn.edu.uoh.learnandroid.contacts.ContactsActivity;
+import cn.edu.uoh.learnandroid.contacts.TelFormatActivity;
 import cn.edu.uoh.learnandroid.fragment.*;
 import cn.edu.uoh.learnandroid.fragment.fakenews.NewsActivity;
 import cn.edu.uoh.learnandroid.note.NoteActivity;
@@ -32,6 +33,7 @@ public class DemoItem {
             new DemoItem("记事本案例", NoteActivity.class),
             new DemoItem("拨打电话", CallPhoneActivity.class),
             new DemoItem("读取联系人", ContactsActivity.class),
+            new DemoItem("电话号码格式化", TelFormatActivity.class),
     };
 
     String name;
