@@ -40,7 +40,11 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.google.code.gson:gson:2.8.6'
 
+    // SQLite 框架
     def room_version = "2.2.1"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    // 权限框架
+    implementation 'com.lovedise:permissiongen:0.1.1'
 }
