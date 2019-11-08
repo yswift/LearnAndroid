@@ -3,12 +3,12 @@ package cn.edu.uoh.learnandroid.fragment.fakenews;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 
-public class News extends BaseObservable {
+class News extends BaseObservable {
     private String title;
 
     private String content;
 
-    public News(String title, String content) {
+    News(String title, String content) {
         this.title = title;
         this.content = content;
     }

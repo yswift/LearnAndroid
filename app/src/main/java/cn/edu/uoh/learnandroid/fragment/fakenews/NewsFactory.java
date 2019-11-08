@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class NewsFactory {
+class NewsFactory {
     static List<News> getNews() {
         List<News> newsList = new ArrayList<>();
         for (int i = 1; i <= 50; i++) {
