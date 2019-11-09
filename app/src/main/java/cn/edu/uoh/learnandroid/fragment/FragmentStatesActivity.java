@@ -7,10 +7,10 @@ import android.os.Bundle;
 import cn.edu.uoh.learnandroid.R;
 
 public class FragmentStatesActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment_states);
+        setTitle("Fragment 状态保存");
     }
 }

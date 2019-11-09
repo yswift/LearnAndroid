@@ -19,6 +19,7 @@ public class DynamicFragmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dynamic_fragment);
+        setTitle("动态Fragment");
     }
 
     public void startDemo1(View view) {

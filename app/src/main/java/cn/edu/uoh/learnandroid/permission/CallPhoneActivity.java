@@ -27,6 +27,7 @@ public class CallPhoneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call_phone);
+        setTitle("拨打电话");
     }
 
     public void clickCallPhoneBtn(View view) {

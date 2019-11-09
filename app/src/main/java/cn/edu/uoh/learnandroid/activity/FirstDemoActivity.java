@@ -15,6 +15,7 @@ public class FirstDemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_demo);
+        setTitle("First Activity");
 
         //找到按钮对象
         Button btn = findViewById(R.id.button);

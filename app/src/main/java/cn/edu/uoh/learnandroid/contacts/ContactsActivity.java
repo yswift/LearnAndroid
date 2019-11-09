@@ -31,7 +31,8 @@ public class ContactsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
-
+        setTitle("读取联系人");
+        // 动态申请权限
         PermissionGen.with(this)
                 .addRequestCode(CONTACTS_CODE)
                 .permissions(Manifest.permission.READ_CONTACTS)

@@ -19,7 +19,7 @@ public class ListDemo2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_demo2);
-
+        setTitle("复杂ListView");
         initListView();
     }
 

@@ -20,6 +20,7 @@ public class TelFormatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tel_format);
+        setTitle("电话号码格式化");
     }
 
     public void clickFormatBtn(View view) {

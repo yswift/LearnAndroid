@@ -30,6 +30,7 @@ public class NoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
+        setTitle("记事本案例");
 
         listView = findViewById(R.id.note_list);
         listView.setOnItemClickListener((AdapterView<?> parent, View view, int position, long id) -> {
@@ -40,6 +41,7 @@ public class NoteActivity extends AppCompatActivity {
         updateTitleList();
     }
 
+    // 更新记事本列表
     void updateTitleList() {
         notes = getNotes();
         Log.i(TAG, "initTitleList: " + notes);

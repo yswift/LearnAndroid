@@ -16,7 +16,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
-
+        setTitle("RecyclerView");
         RecyclerView weatherRecycler = findViewById(R.id.weather_recycler);
 
         // 线性布局

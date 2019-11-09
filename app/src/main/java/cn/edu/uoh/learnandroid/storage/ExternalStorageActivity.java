@@ -22,6 +22,7 @@ public class ExternalStorageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared_preferences);
+        setTitle("使用外部存储External");
         load();
     }
 

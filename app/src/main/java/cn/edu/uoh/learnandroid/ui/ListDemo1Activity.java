@@ -21,7 +21,7 @@ public class ListDemo1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_demo1);
-
+        setTitle("简单ListView");
         setListView(android.R.layout.simple_list_item_1);
     }
 

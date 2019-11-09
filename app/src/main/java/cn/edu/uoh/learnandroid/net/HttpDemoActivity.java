@@ -23,6 +23,7 @@ public class HttpDemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_http_demo);
+        setTitle("获取Bing信息");
     }
 
     public void clickGetBtn(View view) {

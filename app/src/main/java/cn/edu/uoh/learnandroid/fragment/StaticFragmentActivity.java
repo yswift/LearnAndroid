@@ -15,6 +15,7 @@ public class StaticFragmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_static_fragment);
+        setTitle("静态Fragment");
     }
 
     public void receiveMsg(String msg) {

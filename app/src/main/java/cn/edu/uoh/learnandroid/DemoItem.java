@@ -14,7 +14,7 @@ import cn.edu.uoh.learnandroid.storage.*;
 
 public class DemoItem {
     public static DemoItem[] items = {
-            new DemoItem("First Activiity", FirstDemoActivity.class),
+            new DemoItem("First Activity", FirstDemoActivity.class),
             new DemoItem("菜单", MenuActivity.class),
             new DemoItem("Intent", IntentActivity.class),
             new DemoItem("生命周期", LifeCycleActivity.class),
@@ -28,10 +28,10 @@ public class DemoItem {
             new DemoItem("静态Fragment", StaticFragmentActivity.class),
             new DemoItem("动态Fragment", DynamicFragmentActivity.class),
             new DemoItem("Fragment 状态保存", FragmentStatesActivity.class),
-            new DemoItem("新闻案例(Fragment)", NewsActivity.class),
+            new DemoItem("假新闻案例(使用Fragment)", NewsActivity.class),
             new DemoItem("存储SharedPreferences", SharedPreferencesActivity.class),
-            new DemoItem("存储Internal", InternalStorageActivity.class),
-            new DemoItem("存储External", ExternalStorageActivity.class),
+            new DemoItem("使用内部存储Internal", InternalStorageActivity.class),
+            new DemoItem("使用外部存储External", ExternalStorageActivity.class),
             new DemoItem("记事本案例", NoteActivity.class),
             new DemoItem("拨打电话", CallPhoneActivity.class),
             new DemoItem("读取联系人", ContactsActivity.class),

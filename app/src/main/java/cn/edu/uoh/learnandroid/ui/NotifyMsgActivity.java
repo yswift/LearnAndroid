@@ -17,6 +17,7 @@ public class NotifyMsgActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notify_msg);
+        setTitle("提示、通知消息");
     }
 
     public void showToasts(View view) {

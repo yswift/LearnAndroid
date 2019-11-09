@@ -16,6 +16,7 @@ public class DataBindActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("数据绑定");
 //        setContentView(R.layout.activity_data_bind);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_data_bind);
 
