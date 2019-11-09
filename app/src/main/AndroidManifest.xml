@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.edu.uoh.learnandroid">
-
+    <!-- 拨打电话权限 -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-
-        android:networkSecurityConfig="@xml/network_security_config"
-        >
-<!--        android:usesCleartextTraffic="true"-->
-        <activity android:name=".net.HttpDemoActivity"></activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".net.VolleyDemoActivity"></activity>
+        <!-- android:usesCleartextTraffic="true" -->
+        <activity android:name=".net.HttpDemoActivity" />
         <activity android:name=".contacts.TelFormatActivity" />
         <activity android:name=".contacts.ContactsActivity" />
         <activity android:name=".permission.CallPhoneActivity" />
@@ -47,17 +46,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
-
-    <!-- 拨打电话权限 -->
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <!-- 读写联系人权限 -->
+    </application> <!-- 读写联系人权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-    <!-- 读写外部存储权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" /> <!-- 读写外部存储权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 访问网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
 </manifest>

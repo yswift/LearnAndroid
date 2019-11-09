@@ -4,7 +4,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,7 +12,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
-import java.net.URLDecoder;
 
 import cn.edu.uoh.learnandroid.R;
 
@@ -29,8 +27,6 @@ public class HttpDemoActivity extends AppCompatActivity {
 
     public void clickGetBtn(View view) {
         Log.i(TAG, "clickGetBtn: ");
-        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
-
         HtmlTask htmlTask = new HtmlTask();
         htmlTask.execute(host);
     }
@@ -45,8 +41,8 @@ public class HttpDemoActivity extends AppCompatActivity {
                 Log.i(TAG, "doInBackground: html = " + html);
                 return html;
             } catch (Throwable e) {
-                Log.e(TAG, "获取天气信息失败", e);
-                return "获取天气信息失败," + e;
+                Log.e(TAG, "获取cn.bing.com失败", e);
+                return "获取cn.bing.com失败," + e;
             }
         }
 
