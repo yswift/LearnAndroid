@@ -5,6 +5,7 @@ import cn.edu.uoh.learnandroid.contacts.ContactsActivity;
 import cn.edu.uoh.learnandroid.contacts.TelFormatActivity;
 import cn.edu.uoh.learnandroid.fragment.*;
 import cn.edu.uoh.learnandroid.fragment.fakenews.NewsActivity;
+import cn.edu.uoh.learnandroid.net.HttpDemoActivity;
 import cn.edu.uoh.learnandroid.note.NoteActivity;
 import cn.edu.uoh.learnandroid.permission.CallPhoneActivity;
 import cn.edu.uoh.learnandroid.ui.*;
@@ -34,6 +35,7 @@ public class DemoItem {
             new DemoItem("拨打电话", CallPhoneActivity.class),
             new DemoItem("读取联系人", ContactsActivity.class),
             new DemoItem("电话号码格式化", TelFormatActivity.class),
+            new DemoItem("获取Bing信息", HttpDemoActivity.class),
     };
 
     String name;
