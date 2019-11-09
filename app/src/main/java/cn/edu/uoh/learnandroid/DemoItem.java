@@ -1,6 +1,7 @@
 package cn.edu.uoh.learnandroid;
 
 import cn.edu.uoh.learnandroid.activity.*;
+import cn.edu.uoh.learnandroid.backgroundtask.ShowTimeActivity;
 import cn.edu.uoh.learnandroid.contacts.ContactsActivity;
 import cn.edu.uoh.learnandroid.contacts.TelFormatActivity;
 import cn.edu.uoh.learnandroid.fragment.*;
@@ -38,6 +39,8 @@ public class DemoItem {
             new DemoItem("电话号码格式化", TelFormatActivity.class),
             new DemoItem("获取Bing信息", HttpDemoActivity.class),
             new DemoItem("Volley获取Bing信息", VolleyDemoActivity.class),
+            new DemoItem("通知Demo", NotificationDemoActivity.class),
+            new DemoItem("广播Demo：显示时间", ShowTimeActivity.class),
     };
 
     String name;
