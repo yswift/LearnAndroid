@@ -35,6 +35,7 @@ public class MusicActivity extends AppCompatActivity {
     public void startServer(View view) {
         Log.i(TAG, "startServer: ");
         Intent intent = new Intent(this, MusicServer.class);
+        startForegroundService()
         startService(intent);
     }
 
