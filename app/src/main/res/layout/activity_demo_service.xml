@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".backgroundtask.DemoServiceActivity">
+
+    <Button
+        android:id="@+id/btn_start_intent_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startDemoIntentServer"
+        android:text="启动DemoIntentServer"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/bnt_start_bind_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="startDemoBindServer"
+        android:text="绑定服务" />
+
+    <Button
+        android:id="@+id/bnt_stop_bind_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="stopDemoBindServer"
+        android:text="解绑服务" />
+
+    <Button
+        android:id="@+id/btn_get_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="getNumber"
+        android:text="从服务获取数值" />
+
+</LinearLayout>

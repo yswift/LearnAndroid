@@ -1,7 +1,7 @@
 package cn.edu.uoh.learnandroid;
 
 import cn.edu.uoh.learnandroid.activity.*;
-import cn.edu.uoh.learnandroid.backgroundtask.MusicActivity;
+import cn.edu.uoh.learnandroid.backgroundtask.DemoServiceActivity;
 import cn.edu.uoh.learnandroid.backgroundtask.ShowTimeActivity;
 import cn.edu.uoh.learnandroid.contacts.ContactsActivity;
 import cn.edu.uoh.learnandroid.contacts.TelFormatActivity;
@@ -42,7 +42,7 @@ public class DemoItem {
             new DemoItem("Volley获取Bing信息", VolleyDemoActivity.class),
             new DemoItem("通知Demo", NotificationDemoActivity.class),
             new DemoItem("广播Demo：显示时间", ShowTimeActivity.class),
-            new DemoItem("服务Demo：播放音乐", MusicActivity.class),
+            new DemoItem("服务Demo1", DemoServiceActivity.class),
     };
 
     String name;

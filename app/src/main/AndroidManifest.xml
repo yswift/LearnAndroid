@@ -10,13 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".backgroundtask.MusicActivity"></activity>
+        <activity android:name=".backgroundtask.AsyncTaskActivity"></activity>
+        <activity android:name=".backgroundtask.DemoServiceActivity" />
         <activity android:name=".backgroundtask.ShowTimeActivity" />
         <activity android:name=".ui.NotificationDemoActivity" />
         <activity android:name=".net.VolleyDemoActivity" />
-        <activity android:name=".net.HttpDemoActivity" /> <!-- android:usesCleartextTraffic="true" -->
+        <activity android:name=".net.HttpDemoActivity" />
         <activity android:name=".contacts.TelFormatActivity" />
-        <activity android:name=".contacts.ContactsActivity" />
+        <activity android:name=".contacts.ContactsActivity" /> <!-- android:usesCleartextTraffic="true" -->
         <activity android:name=".permission.CallPhoneActivity" />
         <activity android:name=".note.NoteEditActivity" />
         <activity android:name=".note.NoteActivity" />
@@ -50,16 +51,19 @@
         </activity>
 
         <service
-            android:name=".backgroundtask.MusicServer"
+            android:name=".backgroundtask.DemoBindService"
             android:exported="false" />
-    </application> <!-- 访问网络权限 -->
+        <service
+            android:name=".backgroundtask.DemoIntentService"
+            android:exported="false" />
+    </application>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
 </manifest>
