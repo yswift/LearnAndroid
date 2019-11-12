@@ -10,6 +10,7 @@ import cn.edu.uoh.learnandroid.fragment.*;
 import cn.edu.uoh.learnandroid.fragment.fakenews.NewsActivity;
 import cn.edu.uoh.learnandroid.net.HttpDemoActivity;
 import cn.edu.uoh.learnandroid.net.VolleyDemoActivity;
+import cn.edu.uoh.learnandroid.neteasenews.NeteaseNewsActivity;
 import cn.edu.uoh.learnandroid.note.NoteActivity;
 import cn.edu.uoh.learnandroid.permission.CallPhoneActivity;
 import cn.edu.uoh.learnandroid.ui.*;
@@ -45,6 +46,7 @@ public class DemoItem {
             new DemoItem("AsyncTask", AsyncTaskActivity.class),
             new DemoItem("获取Bing信息", HttpDemoActivity.class),
             new DemoItem("Volley获取Bing信息", VolleyDemoActivity.class),
+            new DemoItem("网易新闻", NeteaseNewsActivity.class),
     };
 
     String name;
