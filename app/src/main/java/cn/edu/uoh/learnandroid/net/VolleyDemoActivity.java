@@ -25,7 +25,6 @@ import cn.edu.uoh.learnandroid.R;
 public class VolleyDemoActivity extends AppCompatActivity {
     private static final String TAG = "VolleyDemoActivity";
     private static final String host = "https://cn.bing.com";
-//    private static final String host = "https://www.baidu.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +62,6 @@ public class VolleyDemoActivity extends AppCompatActivity {
                 return headers;
             }
         };
-
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
     }

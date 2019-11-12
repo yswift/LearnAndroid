@@ -34,9 +34,9 @@ public class HttpTools {
         }
     }
 
-    public static InputStream doGet(String url) throws IOException {
-        URL uurl = new URL(url);
-        HttpURLConnection urlc = (HttpURLConnection) uurl.openConnection();
+    public static InputStream doGet(String urlString) throws IOException {
+        URL url = new URL(urlString);
+        HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
         // 把自己伪装成浏览器
         urlc.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0");
         urlc.connect();

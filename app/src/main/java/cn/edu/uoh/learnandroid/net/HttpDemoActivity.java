@@ -46,7 +46,6 @@ public class HttpDemoActivity extends AppCompatActivity {
                 return "获取cn.bing.com失败," + e;
             }
         }
-
         @Override
         protected void onPostExecute(String s) {
             TextView txtBing = findViewById(R.id.txt_bing);
@@ -74,7 +73,6 @@ public class HttpDemoActivity extends AppCompatActivity {
                 return null;
             }
         }
-
         @Override
         protected void onPostExecute(byte[] bytes) {
             if (bytes == null) {

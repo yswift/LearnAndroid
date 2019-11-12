@@ -21,11 +21,13 @@
         android:id="@+id/btn_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="startTask"
         android:text="开始" />
 
     <Button
         android:id="@+id/btn_cancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="stopTask"
         android:text="终止" />
 </LinearLayout>
