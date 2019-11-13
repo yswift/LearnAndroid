@@ -39,6 +39,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         this.newsFetcher = newsFetcher;
     }
 
+    static class ViewHolder extends RecyclerView.ViewHolder {
+        private CardView cardView;
+
+        ViewHolder(@NonNull CardView itemView) {
+            super(itemView);
+            cardView = itemView;
+        }
+    }
+
     @NonNull
     @Override
     public NewsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -67,19 +76,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         return newsList.size();
     }
 
-    public void setNewsList(ArrayList<NeteaseNews> newsList) {
+    // 修改新闻列表，获取到新闻列表后使用此方法修改adapter的新闻列表
+    void setNewsList(ArrayList<NeteaseNews> newsList) {
         this.newsList = newsList;
         // 数据已更改，更新UI
         notifyDataSetChanged();
-    }
-
-    static class ViewHolder extends RecyclerView.ViewHolder {
-        private CardView cardView;
-
-        ViewHolder(@NonNull CardView itemView) {
-            super(itemView);
-            cardView = itemView;
-        }
     }
 
     private void showNews(NeteaseNews news, CardView cardView) {
