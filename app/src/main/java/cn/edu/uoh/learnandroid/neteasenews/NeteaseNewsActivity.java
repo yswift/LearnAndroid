@@ -42,12 +42,13 @@ public class NeteaseNewsActivity extends AppCompatActivity {
         newFetcher.setCompleteListener(new NewsFetcher.CompleteListener() {
             @Override
             public void onSuccess(ArrayList<NeteaseNews> newsList) {
-                newsAdapter.setNewsList(newsList);
                 swipeRefreshLayout.setRefreshing(false);
+                newsAdapter.setNewsList(newsList);
             }
 
             @Override
             public void onError(Throwable e) {
+                swipeRefreshLayout.setRefreshing(false);
                 Toast.makeText(NeteaseNewsActivity.this, "失败：" + e, Toast.LENGTH_SHORT).show();
             }
         });
