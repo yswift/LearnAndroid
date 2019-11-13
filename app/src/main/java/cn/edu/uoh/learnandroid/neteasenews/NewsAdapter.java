@@ -27,36 +27,25 @@ import cn.edu.uoh.learnandroid.net.VolleyImageCache;
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     private static final String TAG = "NewsAdapter";
 
+    // 单击新闻，启动activity时需要
     private Context context;
+    private NewsFetcher newsFetcher;
 
-    // 当前新闻位置
-    private int currentPosition = 0;
-    // 每次获取的新闻数量
-    private int fetchSize = 10;
     // 新闻list
     private ArrayList<NeteaseNews> newsList = new ArrayList<>();
 
-    // Volley 相关类
-    // 请求队列
-    private RequestQueue requestQueue;
-    // image cache
-    private VolleyImageCache volleyImageCache = new VolleyImageCache(20);
-
-    // 刷新完成listener
-    private Runnable completeRefreshListener;
-
-    NewsAdapter(Context context) {
+    NewsAdapter(Context context, NewsFetcher newsFetcher) {
         this.context = context;
-        requestQueue = Volley.newRequestQueue(context);
+        this.newsFetcher = newsFetcher;
     }
 
     @NonNull
     @Override
     public NewsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Log.i(TAG, "onCreateViewHolder: ");
-        CardView cv = (CardView) LayoutInflater.from(parent.getContext())
+        CardView cardView = (CardView) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.card_news, parent, false);
-        return new NewsAdapter.ViewHolder(cv);
+        return new NewsAdapter.ViewHolder(cardView);
     }
 
     @Override
@@ -68,7 +57,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         showNews(news, cardView);
         // 处理单击
         cardView.setOnClickListener((v) -> {
-            // TODO 显示新闻内容
+            // TODO 单击时显示新闻内容
         });
     }
 
@@ -76,6 +65,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     public int getItemCount() {
         Log.d(TAG, "getItemCount: " + newsList.size());
         return newsList.size();
+    }
+
+    public void setNewsList(ArrayList<NeteaseNews> newsList) {
+        this.newsList = newsList;
+        // 数据已更改，更新UI
+        notifyDataSetChanged();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
@@ -88,49 +83,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     }
 
     private void showNews(NeteaseNews news, CardView cardView) {
-        // 绑定文本
+        // 显示文本
         TextView title = cardView.findViewById(R.id.news_title);
         title.setText(news.getTitle());
         TextView source = cardView.findViewById(R.id.news_source);
         source.setText(news.getSource() + ", " + news.getMtime());
-        // 绑定图像
+        // 显示图像
         NetworkImageView imgBing = cardView.findViewById(R.id.news_img);
-        ImageLoader loader = new ImageLoader(requestQueue, volleyImageCache);
-        // 设置NetworkImageView的 url和 ImageLoader
-        imgBing.setImageUrl(news.getImgsrc(), loader);
-    }
-
-    void setCompleteRefreshListener(Runnable listener) {
-        completeRefreshListener = listener;
-    }
-
-    void refresh() {
-        String urlTemplate = "http://c.m.163.com/nc/article/headline/T1348647853363/%d-%d.html";
-        String url = String.format(urlTemplate, currentPosition, fetchSize);
-        Log.d(TAG, "refresh: url=" + url);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                response -> {
-                    // 更新位置，为下次刷新准备
-                    currentPosition += fetchSize;
-                    Gson gson = new Gson();
-                    PrimitiveNews primitiveNews = gson.fromJson(response, PrimitiveNews.class);
-                    newsList = primitiveNews.getNews();
-                    Log.d(TAG, "onResponse: " + newsList);
-                    // 更新通知
-                    NewsAdapter.this.notifyDataSetChanged();
-                    // 刷新完成通知
-                    if (completeRefreshListener != null) {
-                        completeRefreshListener.run();
-                    }
-                },
-                error -> {
-                    // 刷新完成通知
-                    if (completeRefreshListener != null) {
-                        completeRefreshListener.run();
-                    }
-                    Toast.makeText(context, "获取新闻失败", Toast.LENGTH_SHORT).show();
-                });
-        // Add the request to the RequestQueue.
-        requestQueue.add(stringRequest);
+        newsFetcher.loadImage(news, imgBing);
     }
 }
