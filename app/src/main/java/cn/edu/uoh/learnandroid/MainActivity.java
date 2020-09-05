@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         ListView demoListView = findViewById(R.id.demoList);
         // 逆序
         List<DemoItem> demoItemList = Stream.of(DemoItem.items).collect(Collectors.toList());
-        Collections.reverse(demoItemList);
+//        Collections.reverse(demoItemList);
         // 取标题，生成菜单数据
         String[] titles = demoItemList.stream().map(di -> di.title).toArray(String[]::new);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,titles);
