@@ -21,15 +21,31 @@ public class FirstDemoActivity extends AppCompatActivity {
         Button btn = findViewById(R.id.button);
 
         // 注册监听
+
+        // 方法1：内部类
+//        BtnListener btnListener = new BtnListener();
+//        btn.setOnClickListener(btnListener);
+
+        // 方法2：匿名内部类
 //        btn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                Toast.makeText(FirstDemoActivity.this, "按钮被按下", Toast.LENGTH_SHORT).show();
 //            }
 //        });
+
+        // 方法3：Lambda 表达式
         btn.setOnClickListener((v) -> {
             Toast.makeText(FirstDemoActivity.this, "Lambda按钮被按下", Toast.LENGTH_SHORT).show();
         });
 
+    }
+
+    class BtnListener implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(FirstDemoActivity.this, "按钮被按下", Toast.LENGTH_LONG).show();
+            Toast.makeText(FirstDemoActivity.this, "", Toast.LENGTH_SHORT).show();
+        }
     }
 }
