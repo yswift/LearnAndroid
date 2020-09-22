@@ -18,6 +18,7 @@ import cn.edu.uoh.learnandroid.storage.*;
 
 public class DemoItem {
     public static DemoItem[] items = {
+            // 添加Activity 后在这里加上菜单项
             new DemoItem("First Activity", FirstDemoActivity.class),
             new DemoItem("菜单", MenuActivity.class),
             new DemoItem("Intent", IntentActivity.class),
