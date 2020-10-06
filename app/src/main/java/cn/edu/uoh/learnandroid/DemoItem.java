@@ -23,6 +23,7 @@ public class DemoItem {
             new DemoItem("菜单", MenuActivity.class),
             new DemoItem("Intent", IntentActivity.class),
             new DemoItem("生命周期", LifeCycleActivity.class),
+            new DemoItem("UI DEMO", UIDemoActivity.class),
             new DemoItem("Linear layout", LinearDemoActivity.class),
             new DemoItem("Constraint layout", ConstraintDemoActivity.class),
             new DemoItem("数据绑定", DataBindActivity.class),
