@@ -6,7 +6,8 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {Note.class}, version = 1)
+// fix error:You can either provide `room.schemaLocation` annotation processor argument OR set exportSchema to false.
+@Database(entities = {Note.class}, version = 1, exportSchema = false)
 public abstract class NoteDatabase extends RoomDatabase {
     private static volatile NoteDatabase instance;
 
