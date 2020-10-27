@@ -1,10 +1,5 @@
 apply plugin: 'com.android.application'
 
-//configurations.all {
-//    resolutionStrategy.force "org.antlr:antlr4-runtime:4.7.1"
-//    resolutionStrategy.force "org.antlr:antlr4-tool:4.7.1"
-//}
-
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -54,7 +49,8 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
     // SQLite 框架
-    def room_version = "2.2.5"
+//    def room_version = "2.2.5"
+    def room_version = "2.3.0-alpha01"
     //noinspection GradleDependency
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
