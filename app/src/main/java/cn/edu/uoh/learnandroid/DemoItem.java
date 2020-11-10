@@ -38,6 +38,7 @@ public class DemoItem {
             new DemoItem("存储SharedPreferences", SharedPreferencesActivity.class),
             new DemoItem("使用内部存储Internal", InternalStorageActivity.class),
             new DemoItem("使用外部存储External", ExternalStorageActivity.class),
+            new DemoItem("使用外部存储External字符流", ExternalStorageActivity2.class),
             new DemoItem("记事本案例", NoteActivity.class),
             new DemoItem("拨打电话", CallPhoneActivity.class),
             new DemoItem("读取联系人", ContactsActivity.class),

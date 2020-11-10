@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -39,7 +40,8 @@ public class NewsTitleFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_news_title, container, false);
         // 获取新闻标题
-        List<String> titles = newsList.stream().map((news) -> news.getTitle()).collect(Collectors.toList());
+//        List<String> titles = newsList.stream().map((news) -> news.getTitle()).collect(Collectors.toList());
+        List<String> titles = getNewsTitle();
         ArrayAdapter<String> adapter = new ArrayAdapter<>(view.getContext(),android.R.layout.simple_list_item_1, titles);
 
         ListView titleListView = view.findViewById(R.id.title_list_view);
@@ -49,6 +51,15 @@ public class NewsTitleFragment extends Fragment {
             showContent(position);
         });
         return view;
+    }
+
+    // 获取新闻标题
+    List<String> getNewsTitle() {
+        List<String> titles = new ArrayList<>();
+        for (News news : newsList) {
+            titles.add(news.getTitle());
+        }
+        return titles;
     }
 
     void showContent(int position) {
